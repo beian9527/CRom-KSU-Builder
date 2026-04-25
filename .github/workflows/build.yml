@@ -136,6 +136,12 @@ on:
         type: boolean
         default: false
 
+      fuck_modules_sig_protect:
+        description: "Fuck-Modules-Sig-Protect: FUCK MODULES SIG Protectttt"
+        required: true
+        type: boolean
+        default: false
+
       fuck_werror:
         description: "Fuck-Werror: FUCK WERROR IN CONFIGS"
         required: true
@@ -364,6 +370,13 @@ jobs:
             sed -i '/CONFIG_WERROR/d' out/.config
             echo "CONFIG_CC_WERROR=n" >> out/.config
             echo "CONFIG_WERROR=n" >> out/.config
+
+          fi
+
+          if [[ "${{ inputs.fuck_modules_sig_protect }}" == "true" ]]; then
+
+            sed -i '/CONFIG_MODULE_SIG_PROTECT/d' out/.config
+            echo "CONFIG_MODULE_SIG_PROTECT=n" >> out/.config
 
           fi
 
