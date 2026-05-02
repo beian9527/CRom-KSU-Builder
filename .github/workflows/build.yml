@@ -394,7 +394,7 @@ jobs:
 
                 if [[ "${{ inputs.susfs-gki }}" == "android13-5.15" ]]; then
 
-                  patch -p1 < ${GITHUB_WORKSPACE}/patches/fix_task_mmu_5.15.patch
+                  patch -p0 < ${GITHUB_WORKSPACE}/patches/fix_task_mmu_5.15.patch
 
                 fi
 
