@@ -268,11 +268,11 @@ jobs:
 
           fi
 
-          git clone --depth=1 -b ${{ inputs.kernel_branch }} https://github.com/${source}/${{ inputs.kernel_source_format }}_${ brand }_${{ inputs.soc }}.git ${{ inputs.soc }} || exit 1
+          git clone --depth=1 -b ${{ inputs.kernel_branch }} https://github.com/${source}/${{ inputs.kernel_source_format }}_${brand}_${{ inputs.soc }}.git ${{ inputs.soc }} || exit 1
 
           if [[ "${{ inputs.has_modules_repo }}" == "true" ]]; then
 
-            git clone --depth=1 -b ${{ inputs.kernel_branch }} https://github.com/${source}/${{ inputs.kernel_source_format }}_${ brand }_${{ inputs.soc }}-modules.git ${{ inputs.soc }}-modules || exit 1
+            git clone --depth=1 -b ${{ inputs.kernel_branch }} https://github.com/${source}/${{ inputs.kernel_source_format }}_${brand}_${{ inputs.soc }}-modules.git ${{ inputs.soc }}-modules || exit 1
 
           fi
 
