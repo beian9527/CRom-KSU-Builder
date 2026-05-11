@@ -129,10 +129,10 @@ on:
         default: None
         options:
           - None
-          - 4.9
-          - 4.14
-          - 4.19
-          - 5.4
+          - "4.9"
+          - "4.14"
+          - "4.19"
+          - "5.4"
 
       droidspaces:
         description: "DroidSpaces: Enable DroidSpaces"
@@ -141,13 +141,13 @@ on:
         default: None
         options:
           - None
-          - 6.12
+          - "6.12"
           - 5.15-6.6
-          - 5.10
-          - 5.4
+          - "5.10"
+          - "5.4"
           - 4.14-4.19
           - 4.4-4.9
-          - 3.18
+          - "3.18"
 
       has_modules_repo:
         description: "Has-Modules-Repo: Enable this ur kernel has modules repo"
