@@ -143,7 +143,8 @@ on:
           - None
           - 6.12
           - 5.15-6.6
-          - 5.4-5.10
+          - 5.10
+          - 5.4
           - 4.14-4.19
           - 4.4-4.9
           - 3.18
@@ -429,7 +430,7 @@ jobs:
 
                 if [[ "${{ inputs.susfs-gki }}" == "android13-5.15" ]]; then
 
-                  patch -p0 < ${GITHUB_WORKSPACE}/patches/fix_task_mmu_5.15.patch
+                  patch -p0 < ${GITHUB_WORKSPACE}/patches/fix_task_mmu_c.patch
 
                 fi
 
